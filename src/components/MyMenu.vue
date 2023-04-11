@@ -1,24 +1,27 @@
 <template>
   <div class="hello">
-    <h1>Menu</h1>
-    <input  type="text" v-model="name" />
-    <div>{{name}}</div>
-    
+    <div v-show="isShow">
+      <h1>Menu</h1>
+    </div>
+    <input type="text" v-model="name" />
+    <div>{{ name }}</div>
+    <button @click="isShow = !isShow">An/Hien</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'My-menu',
+  name: "My-menu",
   data() {
-    return {name: 'phan thanh long'}
+    return {
+      name: "phan thanh long",
+      isShow: true,
+    };
   },
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+}; 
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
